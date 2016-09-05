@@ -5,11 +5,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    var num = 0;
+    let data = {
+      num: 0
+    };
 
-    function cool() {
-      num++;
-    }
+    let getNum = this.update(data, {num: {$set: 69}});
+
     return (
       <div className="App">
         <div className="App-header">
@@ -20,8 +21,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div className="App-content">
-          <Content id={num} />
-          <button onClick={cool()}></button>
+          <Content id={data.num} />
+          <button onClick={getNum}></button>
         </div>
       </div>
     );
