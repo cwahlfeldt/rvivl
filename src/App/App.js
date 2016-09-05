@@ -8,9 +8,6 @@ class App extends Component {
     let data = {
       num: 0
     };
-
-    let getNum = this.update(data, {num: {$set: 69}});
-
     return (
       <div className="App">
         <div className="App-header">
@@ -22,7 +19,7 @@ class App extends Component {
         </p>
         <div className="App-content">
           <Content id={data.num} />
-          <button onClick={getNum}></button>
+          <button onClick={data.num++}></button>
         </div>
       </div>
     );

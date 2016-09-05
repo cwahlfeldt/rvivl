@@ -22,7 +22,7 @@ class Content extends Component {
     return (
       <div
         className="Content">
-        {thisk.props.id}
+        {this.props.id}
         <button className="btn" onClick={this.addContent}>Click Me!</button>
       </div>
     );
